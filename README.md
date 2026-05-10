@@ -123,8 +123,14 @@ python train.py --cvd-type normal --use-diff-training --diff-training-mode origi
 python train.py --cvd-type normal --use-diff-training --diff-training-mode cvd \
     --output-dir results/diff_cvd_model --total-timesteps 1000000 \
     --record-video-interval 100000 --video-length 2000 --use-augmentation
-
 ```
+
+This generates:
+- `results/normal_model`
+- `results/deutan_model`
+- `results/diff_original_model`
+- `results/diff_cvd_model`
+Each of these folders contains subfolders named "checkpoints" (which store the best and final checkpoints), "logs" (where the "training_log" is used to plot the training curve), and "videos" (which record the training process).
 
 ### Evaluate models
 
@@ -157,6 +163,8 @@ python evaluate.py --checkpoint results/diff_cvd_model/checkpoints/best.eqx \
     --use-diff-training --diff-training-mode cvd
 ```
 
+Running these commands will generate an "evaluation" folder in each model folder under the "results" folder, and the evaluation results will be recorded there.
+
 ### Generate visualizations
 
 ```bash
@@ -164,9 +172,9 @@ python visualize.py
 ```
 
 This generates:
-- `training_curves.png` - Training curves of all models.
-- `cvd_effect.png` - Visualization of CVD simulation at different severities.
-- `performance_comparison.png` - Bar chart comparing test performances.
+- `results/comparison/training_curves.png` - Training curves of all models.
+- `results/comparison/cvd_effect.png` - Visualization of CVD simulation at different severities.
+- `results/comparison/performance_comparison.png` - Bar chart comparing test performances.
 
 ## Configuration
 
