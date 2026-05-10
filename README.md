@@ -130,6 +130,7 @@ This generates:
 - `results/deutan_model`
 - `results/diff_original_model`
 - `results/diff_cvd_model`
+
 Each of these folders contains subfolders named "checkpoints" (which store the best and final checkpoints), "logs" (where the "training_log" is used to plot the training curve), and "videos" (which record the training process).
 
 ### Evaluate models
