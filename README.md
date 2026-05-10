@@ -86,7 +86,7 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu12
 pip install -r requirements.txt
 
 # 4. Install Atari ROMs
-python -c "import ale_py; ale_py.ROMs.install()"
+AutoROM --accept-license
 ```
 
 The command to install PyTorch can be found on the webpage: [Get Started](https://pytorch.org/get-started/locally/). Before that, you need to run the command: `nvcc --version` to check the CUDA version.
