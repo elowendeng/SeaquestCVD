@@ -131,7 +131,7 @@ This generates:
 - `results/diff_original_model`
 - `results/diff_cvd_model`
 
-Each of these folders contains subfolders named "checkpoints" (which store the best and final checkpoints), "logs" (where the "training_log" is used to plot the training curve), and "videos" (which record the training process).
+Each of these folders contains subfolders named `checkpoints` (which store the best and final checkpoints), `logs` (where the "training_log" is used to plot the training curve), and `videos` (which record the training process).
 
 ### Evaluate models
 
@@ -164,7 +164,7 @@ python evaluate.py --checkpoint results/diff_cvd_model/checkpoints/best.eqx \
     --use-diff-training --diff-training-mode cvd
 ```
 
-Running these commands will generate an "evaluation" folder in each model folder under the "results" folder, and the evaluation results will be recorded there.
+Running these commands will generate an `evaluation` folder in each model folder under the `results` folder, and the evaluation results will be recorded there.
 
 ### Generate visualizations
 
@@ -203,10 +203,10 @@ training:
 
 ![Training Curves](imgs/training_curves.png)
 
-- *Normal Model (Green solid curve)*: Best reward $\rightarrow$ **1055.00**, completed in **11913.6** seconds.
-- *Deutan Model (Red solid curve)*: Best reward $\rightarrow$ **425.80**, completed in **12655.0** seconds.
-- *Diff Original Model (Blue dotted curve)*: Best reward $\rightarrow$ **521.40**, completed in **16830.2** seconds.
-- *Diff CVD Model (Purple dotted curve)*: Best reward $\rightarrow$ **418.00**. 
+- `Normal Model` *(Green solid curve)*: Best reward $\rightarrow$ **1055.00**, completed in **11913.6** seconds.
+- `Deutan Model` *(Red solid curve)*: Best reward $\rightarrow$ **425.80**, completed in **12655.0** seconds.
+- `Diff Original Model` *(Blue dotted curve)*: Best reward $\rightarrow$ **521.40**, completed in **16830.2** seconds.
+- `Diff CVD Model` *(Purple dotted curve)*: Best reward $\rightarrow$ **418.00**. 
 
 ### Performance Comparison
 
