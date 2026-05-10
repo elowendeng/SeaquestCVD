@@ -1,0 +1,37 @@
+# config.yaml
+# Seaquest CVD Training Configuration
+
+environment:
+  name: "ALE/Seaquest-v5"
+  frame_stack: 4
+  frame_skip: 4
+  screen_size: 84
+  max_episode_steps: 2000
+
+training:
+  total_timesteps: 1000000  # 100w
+  num_steps: 128  # rollout steps
+  num_epochs: 4  # Number of PPO update rounds
+  minibatch_size: 32
+  learning_rate: 2.5e-4  # PPO standard learning rate
+  max_grad_norm: 0.5
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_epsilon: 0.2
+  ent_coef: 0.01  # Reduce the entropy coefficient and become more stable.
+  vf_coef: 0.5
+
+cvd:
+  normal:
+    severity: 0.0
+    use_augmentation: false  # Normal vision does not require enhancement.
+    augmentation:
+      color_jitter: 0.0
+      random_shift: 0
+  
+  deuteranopia:
+    severity: 1.0
+    use_augmentation: true  # Color blindness training uses enhancement.
+    augmentation:
+      color_jitter: 0.2
+      random_shift: 4
